@@ -26,6 +26,7 @@
             <perform>
                 <hint title="Legacy configuration with io.konveyor.demo.config.ApplicationConfiguration" effort="1" category-id="cloud-mandatory">
                     <message>
+                        <![CDATA[
                         The legacy ApplicationConfiguration class is being used in this application. This is discouraged by the migration
                         guidelines, and should be replaced by a more standard approach using Spring's @PropertySource annotation and Environment class:
 
@@ -56,7 +57,6 @@
                         will take precedence over the files available in the lib directory. It would be advisable to remove these files on the WAR to be deployed in Kubernetes.
                         A good way to do this would be by configuring a kubernetes profile in Maven that excludes the properties files:
 
-
                         ```xml
                         <profiles>
                       		<profile>
@@ -83,6 +83,7 @@
                         ```
                         
                         This would ensure that the properties files that the application uses are the ones inside the ConfigMap or Secret objects to be injected in the Tomcat lib directory at deployment time.
+                        ]]>
                     </message>
                     <link title="Spring Documentation - PropertySource javadoc" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html"/>
                     <link title="Mkyong - Spring @PropertySource example" href="https://mkyong.com/spring/spring-propertysources-example/"/>
