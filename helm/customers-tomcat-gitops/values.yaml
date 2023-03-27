@@ -21,7 +21,7 @@ image:
   registry: image-registry.openshift-image-registry.svc:5000
   account: retail
   repository: customers-tomcat-gitops
-version: "12c46ea"
+version: "3262cc5"
 
 env: []
 
